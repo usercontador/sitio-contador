@@ -34,10 +34,38 @@ nav ul li a {
   font-weight: bold;
 }
 .hero {
-  background: #007f5f;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+              url('https://images.unsplash.com/photo-1581093588401-12eea6f7b8dd?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.hero .btn,
+.hero .btn-whatsapp {
+  font-size: 1rem;
+  padding: 12px 24px;
+  margin: 10px 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.hero .btn:hover,
+.hero .btn-whatsapp:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .btn {
   background: #007f5f;
