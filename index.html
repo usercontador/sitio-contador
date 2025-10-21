@@ -25,11 +25,53 @@
     .hero p { margin-bottom: 1rem; }
     .social a { margin: 0 .25rem; }
   </style>
+
+  <style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('menu-toggle');
+      const navList = document.querySelector('nav ul');
+      toggle.addEventListener('click', function() {
+        navList.classList.toggle('show');
+      });
+    });
+  </script>
 </head>
 <body>
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
       <a href="#inicio" class="logo">Gestión Contable</a>
+      <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
       <nav>
         <ul style="list-style:none;display:flex;gap:1rem;margin:0;padding:0;">
           <li><a href="#inicio">Inicio</a></li>
@@ -83,7 +125,7 @@
   <section id="contacto">
     <div class="container">
       <h2>Contáctame</h2>
-      <form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST">
+      <form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST" style="max-width: 600px; margin: auto;">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://usercontador.github.io/sitio-contador/gracias.html">
         <input type="text" name="nombre" placeholder="Tu nombre completo" required>
@@ -101,7 +143,7 @@
         <textarea name="mensaje" placeholder="Escribe tu mensaje o consulta" required></textarea>
         <button type="submit">Enviar mensaje</button>
       </form>
-      <div class="agenda">
+      <div class="agenda" style="max-width: 600px; margin: 2rem auto;">
         <p>¿Prefieres agendar directamente una reunión?</p>
         <div class="calendly-inline-widget" data-url="https://calendly.com/dbp-1209/30min" style="min-width:320px;height:630px;"></div>
       </div>
