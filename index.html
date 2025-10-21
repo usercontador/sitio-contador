@@ -57,10 +57,6 @@
       }
     }
   </style>
-
-
-
-
 <style>
       .menu-toggle {
         display: none;
@@ -91,24 +87,32 @@
         }
       }
     </style>
+
+
 <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.getElementById('menu-toggle');
-        const navList = document.querySelector('.nav-links');
-        if (toggle && navList) {
-          toggle.addEventListener('click', function() {
-            navList.classList.toggle('show');
-          });
-        }
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    if (toggle && navList) {
+      toggle.addEventListener('click', function() {
+        navList.classList.toggle('show');
       });
-    </script>
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navList.classList.remove('show');
+        });
+      });
+    }
+  });
+</script>
 </head>
 <body>
 <header>
 <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
 <button aria-label="Abrir menú" class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button><a class="logo" href="#inicio">Gestión Contable</a>
-
-
 <nav>
 <ul class="nav-links">
 <li><a href="#inicio">Inicio</a></li>
