@@ -66,14 +66,57 @@
       });
     });
   </script>
+
+  <style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column !important;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .nav-links.show {
+        display: flex !important;
+      }
+      form input, form select, form textarea {
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('menu-toggle');
+      const navList = document.querySelector('.nav-links');
+      if (toggle && navList) {
+        toggle.addEventListener('click', function() {
+          navList.classList.toggle('show');
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
       <a href="#inicio" class="logo">Gestión Contable</a>
       <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-      <nav>
-        <ul style="list-style:none;display:flex;gap:1rem;margin:0;padding:0;">
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+<nav>
+        <ul class="nav-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -125,7 +168,7 @@
   <section id="contacto">
     <div class="container">
       <h2>Contáctame</h2>
-      <form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST" style="max-width: 600px; margin: auto;">
+      <form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST" style="max-width:600px;margin:auto;padding:1rem;" style="max-width: 600px; margin: auto;">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://usercontador.github.io/sitio-contador/gracias.html">
         <input type="text" name="nombre" placeholder="Tu nombre completo" required>
@@ -143,7 +186,7 @@
         <textarea name="mensaje" placeholder="Escribe tu mensaje o consulta" required></textarea>
         <button type="submit">Enviar mensaje</button>
       </form>
-      <div class="agenda" style="max-width: 600px; margin: 2rem auto;">
+      <div class="agenda" style="max-width:600px;margin:auto;padding:1rem;" style="max-width: 600px; margin: 2rem auto;">
         <p>¿Prefieres agendar directamente una reunión?</p>
         <div class="calendly-inline-widget" data-url="https://calendly.com/dbp-1209/30min" style="min-width:320px;height:630px;"></div>
       </div>
