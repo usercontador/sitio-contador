@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gestión Contable | Asesoría Contable y Tributaria</title>
-  <meta name="description" content="Gestión Contable: asesoría contable y tributaria para pymes, emprendedores y profesionales. Servicio cercano, transparente y 100% digital.">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestión Contable | Asesoría Contable y Tributaria</title>
+<meta content="Gestión Contable: asesoría contable y tributaria para pymes, emprendedores y profesionales. Servicio cercano, transparente y 100% digital." name="description"/>
+<link href="./favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="./style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script async="" src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<style>
     .logo { font-weight: 700; font-size: 1.1rem; text-decoration: none; color: inherit; }
     .btn-whatsapp {
       display: inline-block;
@@ -25,8 +26,7 @@
     .hero p { margin-bottom: 1rem; }
     .social a { margin: 0 .25rem; }
   </style>
-
-  <style>
+<style>
     .menu-toggle {
       display: none;
       font-size: 1.5rem;
@@ -57,151 +57,140 @@
       }
     }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggle = document.getElementById('menu-toggle');
-      const navList = document.querySelector('nav ul');
-      toggle.addEventListener('click', function() {
-        navList.classList.toggle('show');
-      });
-    });
-  </script>
 
-  <style>
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
+
+
+
+<style>
       .menu-toggle {
-        display: block;
-      }
-      .nav-links {
         display: none;
-        flex-direction: column !important;
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
       }
-      .nav-links.show {
-        display: flex !important;
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column !important;
+          width: 100%;
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .nav-links.show {
+          display: flex !important;
+        }
+        form input, form select, form textarea {
+          font-size: 1rem;
+          width: 100%;
+          box-sizing: border-box;
+        }
       }
-      form input, form select, form textarea {
-        font-size: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggle = document.getElementById('menu-toggle');
-      const navList = document.querySelector('.nav-links');
-      if (toggle && navList) {
-        toggle.addEventListener('click', function() {
-          navList.classList.toggle('show');
-        });
-      }
-    });
-  </script>
+    </style>
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('menu-toggle');
+        const navList = document.querySelector('.nav-links');
+        if (toggle && navList) {
+          toggle.addEventListener('click', function() {
+            navList.classList.toggle('show');
+          });
+        }
+      });
+    </script>
 </head>
 <body>
-  <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
-      <a href="#inicio" class="logo">Gestión Contable</a>
-      <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+<header>
+<div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+<button aria-label="Abrir menú" class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button><a class="logo" href="#inicio">Gestión Contable</a>
+
+
 <nav>
-        <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section id="inicio" class="hero">
-    <div class="container">
-      <h1>Tu aliado en finanzas y asesoría tributaria</h1>
-      <p>Brindamos soluciones contables personalizadas para pymes, emprendedores y profesionales que buscan claridad y crecimiento financiero.</p>
-      <div>
-        <a href="#contacto" class="btn">Solicita una asesoría</a>
-        <a class="btn-whatsapp" href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20más%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-          <i class="fab fa-whatsapp"></i> WhatsApp
+<ul class="nav-links">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#sobre-mi">Sobre mí</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="hero" id="inicio">
+<div class="container">
+<h1>Tu aliado en finanzas y asesoría tributaria</h1>
+<p>Brindamos soluciones contables personalizadas para pymes, emprendedores y profesionales que buscan claridad y crecimiento financiero.</p>
+<div>
+<a class="btn" href="#contacto">Solicita una asesoría</a>
+<a aria-label="Escríbenos por WhatsApp" class="btn-whatsapp" href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20más%20informaci%C3%B3n" rel="noopener" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
         </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="servicios">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="cards">
-        <div class="card"><i class="fas fa-file-invoice"></i><h3>Auditoría</h3><p>Interna y externa con enfoque profesional y ético.</p></div>
-        <div class="card"><i class="fas fa-calculator"></i><h3>Contabilidad</h3><p>Mensual para empresas, emprendedores y pymes.</p></div>
-        <div class="card"><i class="fas fa-file-signature"></i><h3>Declaraciones</h3><p>Renta, IVA, balances, informes y más.</p></div>
-        <div class="card"><i class="fas fa-gavel"></i><h3>Asesoría Tributaria</h3><p>Planificación y cumplimiento ante el SII.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre-mi">
-    <div class="container">
-      <h2>Sobre mí</h2>
-      <p>
+</div>
+</div>
+</section>
+<section id="servicios">
+<div class="container">
+<h2>Servicios</h2>
+<div class="cards">
+<div class="card"><i class="fas fa-file-invoice"></i><h3>Auditoría</h3><p>Interna y externa con enfoque profesional y ético.</p></div>
+<div class="card"><i class="fas fa-calculator"></i><h3>Contabilidad</h3><p>Mensual para empresas, emprendedores y pymes.</p></div>
+<div class="card"><i class="fas fa-file-signature"></i><h3>Declaraciones</h3><p>Renta, IVA, balances, informes y más.</p></div>
+<div class="card"><i class="fas fa-gavel"></i><h3>Asesoría Tributaria</h3><p>Planificación y cumplimiento ante el SII.</p></div>
+</div>
+</div>
+</section>
+<section id="sobre-mi">
+<div class="container">
+<h2>Sobre mí</h2>
+<p>
         Soy <strong>Daniel Becerra</strong>, contador auditor con amplia experiencia en asesoría contable, tributaria y financiera.
         A través de <strong>Gestión Contable</strong>, ayudo a empresas y emprendedores a mantener su contabilidad al día, optimizar sus recursos y cumplir con sus obligaciones tributarias de forma eficiente.
       </p>
-      <p>
+<p>
         Me especializo en ofrecer un servicio <strong>personalizado, transparente y 100 % digital</strong>, adaptado a las necesidades de cada cliente.
         Mi compromiso es acompañarte en cada etapa de tu negocio, entregando soluciones prácticas y confianza en la gestión de tus finanzas.
       </p>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <div class="container">
-      <h2>Contáctame</h2>
-      <form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST" style="max-width:600px;margin:auto;padding:1rem;" style="max-width: 600px; margin: auto;">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://usercontador.github.io/sitio-contador/gracias.html">
-        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-        <input type="email" name="email" placeholder="Correo electrónico" required>
-        <input type="tel" name="telefono" placeholder="Número de teléfono" required>
-        <input type="text" name="rut" placeholder="RUT o RUC" required>
-        <select name="servicio" required>
-          <option value="">Seleccione un servicio</option>
-          <option value="Auditoría">Auditoría</option>
-          <option value="Contabilidad mensual">Contabilidad mensual</option>
-          <option value="Asesoría tributaria">Asesoría tributaria</option>
-          <option value="Declaraciones">Declaraciones</option>
-          <option value="Otro">Otro</option>
-        </select>
-        <textarea name="mensaje" placeholder="Escribe tu mensaje o consulta" required></textarea>
-        <button type="submit">Enviar mensaje</button>
-      </form>
-      <div class="agenda" style="max-width:600px;margin:auto;padding:1rem;" style="max-width: 600px; margin: 2rem auto;">
-        <p>¿Prefieres agendar directamente una reunión?</p>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/dbp-1209/30min" style="min-width:320px;height:630px;"></div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Gestión Contable. Todos los derechos reservados.</p>
-      <div class="social">
-        <a href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:d.becerra@tecnologica.cl" aria-label="Correo"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-  </footer>
+</div>
+</section>
+<section id="contacto">
+<div class="container">
+<h2>Contáctame</h2>
+<form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST" style="max-width: 600px; margin: auto;">
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_next" type="hidden" value="https://usercontador.github.io/sitio-contador/gracias.html"/>
+<input name="nombre" placeholder="Tu nombre completo" required="" type="text"/>
+<input name="email" placeholder="Correo electrónico" required="" type="email"/>
+<input name="telefono" placeholder="Número de teléfono" required="" type="tel"/>
+<input name="rut" placeholder="RUT o RUC" required="" type="text"/>
+<select name="servicio" required="">
+<option value="">Seleccione un servicio</option>
+<option value="Auditoría">Auditoría</option>
+<option value="Contabilidad mensual">Contabilidad mensual</option>
+<option value="Asesoría tributaria">Asesoría tributaria</option>
+<option value="Declaraciones">Declaraciones</option>
+<option value="Otro">Otro</option>
+</select>
+<textarea name="mensaje" placeholder="Escribe tu mensaje o consulta" required=""></textarea>
+<button type="submit">Enviar mensaje</button>
+</form>
+<div class="agenda" style="max-width: 600px; margin: 2rem auto;">
+<p>¿Prefieres agendar directamente una reunión?</p>
+<div class="calendly-inline-widget" data-url="https://calendly.com/dbp-1209/30min" style="min-width:320px;height:630px;"></div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<p>© 2025 Gestión Contable. Todos los derechos reservados.</p>
+<div class="social">
+<a aria-label="WhatsApp" href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20m%C3%A1s%20informaci%C3%B3n" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a aria-label="LinkedIn" href="#"><i class="fab fa-linkedin"></i></a>
+<a aria-label="Correo" href="mailto:d.becerra@tecnologica.cl"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+</footer>
 </body>
 </html>
