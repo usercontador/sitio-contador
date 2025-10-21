@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daniel Becerra - Contador Auditor</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
@@ -57,12 +57,10 @@
       <form action="https://formsubmit.co/d.becerra@tecnologica.cl" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://usercontador.github.io/sitio-contador/gracias.html">
-
         <input type="text" name="nombre" placeholder="Tu nombre completo" required>
         <input type="email" name="email" placeholder="Correo electrónico" required>
         <input type="tel" name="telefono" placeholder="Número de teléfono" required>
         <input type="text" name="rut" placeholder="RUT o RUC" required>
-
         <select name="servicio" required>
           <option value="">Seleccione un servicio</option>
           <option value="Auditoría">Auditoría</option>
@@ -71,11 +69,9 @@
           <option value="Declaraciones">Declaraciones</option>
           <option value="Otro">Otro</option>
         </select>
-
         <textarea name="mensaje" placeholder="Escribe tu mensaje o consulta" required></textarea>
         <button type="submit">Enviar mensaje</button>
       </form>
-
       <div class="agenda">
         <p>¿Prefieres agendar directamente una reunión?</p>
         <a href="https://calendly.com/danielbecerra/consulta" target="_blank" class="btn">Agenda una reunión</a>
