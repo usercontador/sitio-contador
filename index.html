@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daniel Becerra - Contador Auditor</title>
+  <title>Gestión Contable | Asesoría Contable y Tributaria</title>
+  <meta name="description" content="Gestión Contable: asesoría contable y tributaria para pymes, emprendedores y profesionales. Servicio cercano, transparente y 100% digital.">
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos mínimos para el botón de WhatsApp (por si tu style.css no lo incluye) -->
+  <style>
+    .logo { font-weight: 700; font-size: 1.1rem; text-decoration: none; color: inherit; }
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25d366; color: #fff;
+      padding: 0.75rem 1.25rem; border-radius: 999px;
+      text-decoration: none; font-weight: 700;
+      transition: opacity .2s ease-in-out;
+      margin-left: .5rem;
+    }
+    .btn-whatsapp:hover { opacity: .9; }
+    .hero h1 { margin-bottom: .5rem; }
+    .hero p { margin-bottom: 1rem; }
+    .social a { margin: 0 .25rem; }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Daniel Becerra</h1>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a href="#inicio" class="logo">Gestión Contable</a>
       <nav>
-        <ul>
+        <ul style="list-style:none;display:flex;gap:1rem;margin:0;padding:0;">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -26,9 +44,19 @@
 
   <section id="inicio" class="hero">
     <div class="container">
-      <h2>Tu Contador Auditor de Confianza</h2>
-      <p>Servicios contables, tributarios y de auditoría para personas y empresas.</p>
-      <a href="#contacto" class="btn">Solicita una asesoría</a>
+      <h1>Tu aliado en finanzas y asesoría tributaria</h1>
+      <p>Brindamos soluciones contables personalizadas para pymes, emprendedores y profesionales que buscan claridad y crecimiento financiero.</p>
+      <div>
+        <a href="#contacto" class="btn">Solicita una asesoría</a>
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20m%C3%A1s%20informaci%C3%B3n"
+          target="_blank" rel="noopener"
+          aria-label="Escríbenos por WhatsApp"
+        >
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 
@@ -47,7 +75,14 @@
   <section id="sobre-mi">
     <div class="container">
       <h2>Sobre mí</h2>
-      <p>Soy contador auditor con años de experiencia ayudando a empresas a cumplir con sus obligaciones tributarias y contables. Trabajo con compromiso, confidencialidad y precisión.</p>
+      <p>
+        Soy <strong>Daniel Becerra</strong>, contador auditor con amplia experiencia en asesoría contable, tributaria y financiera.
+        A través de <strong>Gestión Contable</strong>, ayudo a empresas y emprendedores a mantener su contabilidad al día, optimizar sus recursos y cumplir con sus obligaciones tributarias de forma eficiente.
+      </p>
+      <p>
+        Me especializo en ofrecer un servicio <strong>personalizado, transparente y 100 % digital</strong>, adaptado a las necesidades de cada cliente.
+        Mi compromiso es acompañarte en cada etapa de tu negocio, entregando soluciones prácticas y confianza en la gestión de tus finanzas.
+      </p>
     </div>
   </section>
 
@@ -74,20 +109,23 @@
       </form>
       <div class="agenda">
         <p>¿Prefieres agendar directamente una reunión?</p>
-        <a href="https://calendly.com/danielbecerra/consulta" target="_blank" class="btn">Agenda una reunión</a>
+        <a href="https://calendly.com/danielbecerra/consulta" target="_blank" rel="noopener" class="btn">Agenda una reunión</a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>© 2025 Daniel Becerra. Todos los derechos reservados.</p>
+      <p>© 2025 Gestión Contable. Todos los derechos reservados.</p>
       <div class="social">
-        <a href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20más%20información" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a
+          href="https://wa.me/56999981328?text=Hola%20Daniel,%20quiero%20m%C3%A1s%20informaci%C3%B3n"
+          target="_blank" rel="noopener" aria-label="WhatsApp"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:d.becerra@tecnologica.cl" aria-label="Correo"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>
