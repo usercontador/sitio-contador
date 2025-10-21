@@ -24,6 +24,9 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 nav ul li {
   margin: 0 15px;
@@ -34,7 +37,7 @@ nav ul li a {
   font-weight: bold;
 }
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
               url('https://images.unsplash.com/photo-1581093588401-12eea6f7b8dd?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
   color: white;
   text-align: center;
@@ -130,4 +133,40 @@ footer .social a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .btn, .btn-whatsapp {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
