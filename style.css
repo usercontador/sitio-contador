@@ -171,23 +171,29 @@ footer .social a {
   }
 }
 
-/* Botón flotante de WhatsApp */
+/* Ajuste: Botón flotante WhatsApp más redondo y estilizado */
 .whatsapp-float-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
 }
+
 .whatsapp-float {
+  width: 60px;
+  height: 60px;
   background-color: #25d366;
   color: white;
-  font-size: 26px;
-  padding: 14px;
   border-radius: 50%;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1);
   background-color: #1ebd5a;
