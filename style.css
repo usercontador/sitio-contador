@@ -220,3 +220,24 @@ footer .social a {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
+
+/*boton servicios*/
+
+.btn-servicio {
+  display: inline-block;
+  margin-top: 12px;
+  background: #007f5f;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+.btn-servicio:hover {
+  background: #005f47;
+}
+#servicios .card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
