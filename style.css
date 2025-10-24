@@ -48,3 +48,34 @@ form {
 form input, form textarea, form button {
   padding: 10px;
 }
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003945;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
