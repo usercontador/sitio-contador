@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const contenedor = document.getElementById('contenido');
-  const navLinks = document.getElementById('nav-links');
+  const navLinks = document.querySelector('.nav-links');
   const toggle = document.getElementById('menu-toggle');
   const header = document.querySelector('header');
 
