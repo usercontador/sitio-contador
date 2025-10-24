@@ -10,21 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   cargarSeccion();
-  window.addEventListener('hashchange', () => {
-    cargarSeccion();
+  window.addEventListener('hashchange', cargarSeccion);
 
-    // 🔽 Cerrar menú hamburguesa al navegar
-    const navLinks = document.querySelector('.nav-links');
-    navLinks?.classList.remove('show');
-  });
-
-  // Botón menú hamburguesa
+  // Botón hamburguesa
   const toggle = document.getElementById('menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+  toggle?.addEventListener('click', () => {
+    navLinks?.classList.toggle('show');
+  });
+
+  // Cerrar menú al hacer clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks?.classList.remove('show');
     });
-  }
+  });
 });

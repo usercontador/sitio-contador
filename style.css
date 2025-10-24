@@ -12,9 +12,17 @@ header, footer {
   width: 90%;
   max-width: 1100px;
   margin: auto;
+}
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
 }
 nav ul {
   list-style: none;
@@ -26,6 +34,14 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
 }
 .hero {
   background: #f4f4f4;
@@ -53,41 +69,21 @@ form input, form textarea, form button {
   padding: 10px;
 }
 
-/* Menú hamburguesa */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: #003945;
-    width: 100%;
     margin-top: 10px;
-    padding: 10px 0;
   }
-
   .nav-links.show {
     display: flex;
   }
-
-  nav ul.nav-links li {
-    margin: 10px 0;
+  .nav-links li {
     text-align: center;
-  }
-
-  nav ul.nav-links li a {
-    color: white;
-    text-decoration: none;
+    padding: 10px 0;
   }
 }
