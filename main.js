@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`secciones/${seccion}.html`)
       .then(res => res.ok ? res.text() : Promise.reject('No encontrado'))
       .then(html => {
+        contenedor.classList.remove('fade-in');
         contenedor.innerHTML = html;
-        navLinks?.classList.remove('show'); // cerrar menú después de carga
+        void contenedor.offsetWidth; // reinicia animación
+        contenedor.classList.add('fade-in');
+        navLinks?.classList.remove('show');
       })
       .catch(() => contenedor.innerHTML = '<p>Sección no encontrada.</p>');
   }
@@ -21,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks?.classList.toggle('show');
   });
 
-  // También cerrar si se hace clic en cualquier link
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks?.classList.remove('show');
