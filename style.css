@@ -1,0 +1,275 @@
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+header {
+  background: #003945;
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1581093588401-12eea6f7b8dd?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.hero .btn,
+.hero .btn-whatsapp {
+  font-size: 1rem;
+  padding: 12px 24px;
+  margin: 10px 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.hero .btn:hover,
+.hero .btn-whatsapp:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.btn {
+  background: #007f5f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+section {
+  padding: 60px 20px;
+  background: white;
+  margin-bottom: 10px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.card {
+  background: #e9ecef;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #003945;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input, form select, form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  padding: 10px;
+  background: #003945;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.agenda {
+  margin-top: 20px;
+}
+footer {
+  background: #003945;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer .social a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .btn, .btn-whatsapp {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+
+/* Botón flotante WhatsApp más pequeño y redondo */
+.whatsapp-float-container {
+  position: fixed;
+  bottom: 20px;
+  right: 35px;
+  z-index: 9999;
+}
+
+.whatsapp-float {
+  width: 48px;
+  height: 48px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  padding: 0;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebd5a;
+}
+
+
+/* Estilos para testimonios */
+#testimonios {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+#testimonios .card {
+  background: white;
+  border-left: 4px solid #007f5f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+#testimonios .card i {
+  color: #007f5f;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+/* Servicios mejorados */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card.servicio {
+  background: #e9ecef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+  min-height: 300px;
+  text-align: center;
+}
+
+.card.servicio i {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #003945;
+}
+
+.card.servicio h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.card.servicio p {
+  flex-grow: 1;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.btn-servicio {
+  display: inline-block;
+  background: #007f5f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.btn-servicio:hover {
+  background: #005f47;
+}
