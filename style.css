@@ -130,3 +130,12 @@ header.scrolled {
   background: #002f37;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+}
