@@ -10,9 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   cargarSeccion();
-  window.addEventListener('hashchange', cargarSeccion);
+  window.addEventListener('hashchange', () => {
+    cargarSeccion();
 
-  // Menú hamburguesa
+    // 🔽 Cerrar menú hamburguesa al navegar
+    const navLinks = document.querySelector('.nav-links');
+    navLinks?.classList.remove('show');
+  });
+
+  // Botón menú hamburguesa
   const toggle = document.getElementById('menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
