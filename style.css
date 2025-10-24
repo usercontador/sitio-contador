@@ -67,8 +67,8 @@ form {
 }
 form input, form textarea, form button {
   padding: 10px;
+  width: 100%;
 }
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
