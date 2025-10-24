@@ -7,22 +7,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif;
 }
 main {
   flex: 1;
   padding: 20px;
 }
 
-/* HEADER */
+/* Header */
 header {
   background: #003945;
   color: white;
   padding: 15px 0;
 }
 header .container {
-  width: 95%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1100px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -30,13 +30,13 @@ header .container {
 }
 .logo {
   font-weight: bold;
-  font-size: 1.4rem;
-  text-decoration: none;
+  font-size: 1.3rem;
   color: white;
+  text-decoration: none;
 }
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   font-size: 1rem;
 }
 .nav-links li {
@@ -45,13 +45,12 @@ header .container {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
 }
 .nav-links a:hover {
   color: #a8dadc;
 }
 
-/* HAMBURGUESA */
+/* Botón hamburguesa */
 .menu-toggle {
   display: none;
   background: none;
@@ -61,7 +60,7 @@ header .container {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -69,31 +68,31 @@ header .container {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #003945;
     position: absolute;
     right: 20px;
     top: 60px;
+    background: #003945;
     padding: 10px;
     border-radius: 5px;
-    width: 180px;
   }
   .nav-links.show {
     display: flex;
   }
   .nav-links li {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   background-color: #003945;
   color: white;
   text-align: center;
   padding: 20px;
+  margin-top: auto;
 }
 
-/* ANIMACIONES */
+/* Animación */
 .fade-in {
   animation: fadeIn 0.4s ease-in;
 }
