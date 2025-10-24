@@ -7,19 +7,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif;
 }
 main {
   flex: 1;
-  padding-bottom: 40px;
+  padding: 20px;
 }
-
-/* HEADER */
 header {
-  background: linear-gradient(to right, #003945, #005f73);
+  background: #003945;
   color: white;
   padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 header .container {
   width: 90%;
@@ -31,32 +28,18 @@ header .container {
 }
 .logo {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: white;
-  letter-spacing: 1px;
-}
-nav {
-  display: flex;
 }
 .nav-links {
   display: flex;
-  gap: 25px;
-}
-.nav-links li {
-  list-style: none;
+  gap: 20px;
 }
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
-.nav-links a:hover {
-  color: #a8dadc;
-}
-
-/* HAMBURGUESA */
 .menu-toggle {
   display: none;
   background: none;
@@ -65,41 +48,30 @@ nav {
   color: white;
   cursor: pointer;
 }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
   .nav-links {
     display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #003945;
     flex-direction: column;
+    background-color: #003945;
+    position: absolute;
+    right: 20px;
+    top: 60px;
     padding: 10px;
-    border-radius: 8px;
-    z-index: 999;
+    border-radius: 5px;
   }
   .nav-links.show {
     display: flex;
   }
-  .nav-links li {
-    padding: 10px 0;
-  }
 }
-
-/* FOOTER */
 footer {
   background-color: #003945;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: auto;
 }
-
-/* ANIMACIONES */
 .fade-in {
   animation: fadeIn 0.4s ease-in;
 }
