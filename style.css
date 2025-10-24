@@ -13,14 +13,18 @@ main {
   padding-bottom: 40px;
 }
 body, input, button, textarea {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Header y footer */
-header, footer {
-  background: #003945;
+header {
+  background: linear-gradient(90deg, #003945, #005f73);
   color: white;
   padding: 20px;
+  transition: all 0.3s ease;
+}
+header.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: #002f37;
 }
 .container {
   width: 90%;
@@ -34,19 +38,25 @@ header .container {
 }
 .logo {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
   color: white;
+  letter-spacing: 1px;
 }
 
 /* Menú visible por defecto */
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #a8dadc;
 }
 
 /* Botón hamburguesa */
@@ -59,7 +69,7 @@ nav a {
   cursor: pointer;
 }
 
-/* Diseño móvil */
+/* Responsive menú móvil */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -79,7 +89,7 @@ nav a {
   }
 }
 
-/* Contenido */
+/* Hero y cards */
 .hero {
   background: #f4f4f4;
   padding: 60px 20px;
@@ -96,7 +106,24 @@ nav a {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInCard 0.6s ease forwards;
 }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Formularios */
 form {
   display: flex;
   flex-direction: column;
@@ -107,25 +134,11 @@ form input, form textarea, form button {
   width: 100%;
 }
 
-/* Animaciones */
+/* Fade in global */
 .fade-in {
   animation: fadeIn 0.4s ease-in;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-}
-.nav-links {
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
-  overflow: hidden;
-}
-.nav-links.show {
-  opacity: 1;
-}
-
-/* Scroll effect header */
-header.scrolled {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  background: #002f37;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
